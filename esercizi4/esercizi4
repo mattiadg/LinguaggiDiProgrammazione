@@ -1,0 +1,12 @@
+Esercizi 4
+•
+Scrivere un metodo stampaArray che stampi gli elementi di un array di interi preso in input e poi vada a capo
+•
+Scrivere un metodo mediaValori che, preso in input un array di interi, restituisca la media dei suoi valori
+•
+Scrivere un metodo seqFibonacci che, preso in input un intero n, restituisca un array contenente i primi n numeri di Fibonacci
+
+Scrivere un metodo findPari che, preso in input un array di interi v, restituisca un array con i soli numeri pari presenti in v
+•
+Scrivere un metodo eliminaDuplicati che, preso in input un array di interi v, restituisca l’array ordinato ottenuto eliminando i duplicati di v, es.
+[3, 14, 0, 3, 0, 21] -> [0, 3, 14, 21]

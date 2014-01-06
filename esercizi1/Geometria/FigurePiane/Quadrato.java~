@@ -1,0 +1,21 @@
+package Geometria.FigurePiane;
+
+public class Quadrato{
+	private double lato;
+
+	public Quadrato(){
+		this(1);
+	}
+
+	public Quadrato(double l){
+		this.lato = l;
+	}
+
+	public double calcolaArea(){
+		return lato * lato;
+	}
+
+	public void raddoppiaArea(){
+		lato *= 2;
+	}
+}

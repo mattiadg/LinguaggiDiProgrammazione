@@ -1,0 +1,7 @@
+Scrivere una classe Autore con attributi nome e cognome, un metodo toString, e un costruttore che permetta all’utente di inserire i dati
+•
+Scrivere una classe Libro con i seguenti attributi: id (numero progressivo), autori (array di oggetti Autore ), titolo, prezzo e casa editrice; un metodo
+toString e un costruttore che lasci inserire i dati all’utente 
+•
+Scrivere una classe CatalogoLibri contenente un array dinamico di libri e un menu che permetta di: stampare il catalogo, inserire un libro, 
+ricercare un libro (con vari parametri); scrivere i metodi per realizzare tali operazioni
