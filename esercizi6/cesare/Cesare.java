@@ -9,11 +9,11 @@ public class Cesare{
 			for(int i = 0; i < strval.length; i++){
 			ch = strval[i];
 			if(ch >= 'A' && ch <= 'Z'){
-				ch = (ch - 'A' + key) % 26;
+				ch = ((ch - 'A' + key) % 26 + 26) % 26;
 				strval[i] = maiuscole[ch];
 			}
 			else if(ch >= 'a' && ch <= 'z'){
-				ch = (ch - 'a' + key) % 26;
+				ch = ((ch - 'a' + key) % 26 + 26) % 26;
 				strval[i] = minuscole[ch];
 			}
 		}

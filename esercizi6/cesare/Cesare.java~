@@ -10,13 +10,15 @@ public class Cesare{
 			ch = strval[i];
 			if(ch >= 'A' && ch <= 'Z'){
 				ch = (ch - 'A' + key) % 26;
+				System.out.println(ch);
 				strval[i] = maiuscole[ch];
 			}
 			else if(ch >= 'a' && ch <= 'z'){
 				ch = (ch - 'a' + key) % 26;
+				System.out.println(ch);
 				strval[i] = minuscole[ch];
 			}
 		}
-		return strval.toString();
+		return new String(strval);
 	}
 }

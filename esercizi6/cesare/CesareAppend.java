@@ -36,6 +36,7 @@ public class CesareAppend{
 			}
 			s.close();
 			out.close();
+			in.delete();
 		}
 		else{
 			System.out.println("Il file input.txt non esiste!");
