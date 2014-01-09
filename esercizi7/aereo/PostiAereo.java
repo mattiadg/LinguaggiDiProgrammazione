@@ -5,8 +5,9 @@
  */
 
 package aereo;
+import java.io.Serializable;
 
-public class PostiAereo{
+public class PostiAereo implements Serializable{
 	private Posto[][] posti;
 	private Passeggero[] passeggeri;
 	private int numeroPasseggeri;
@@ -47,9 +48,15 @@ public class PostiAereo{
 
 	/* Stampa l'elenco dei passeggeri */
 	public void stampaPasseggeri(){
-		System.out.println("Elenco passeggeri:");
-		for(int i = 0; i < numeroPasseggeri; i++){
-			System.out.println(passeggeri[i].toString());
+		System.out.println("\n\n\n\n\nElenco passeggeri:\n");
+		if(numeroPasseggeri == 0){
+			System.out.println("\n\n\n\n\n\nNon ci sono passeggeri!\n\n\n\n\n\n\n");
+		}
+		else{
+			for(int i = 0; i < numeroPasseggeri; i++){
+				System.out.println(passeggeri[i].toString());
+			}
+			System.out.println("\n\n\n\n\n\n");
 		}
 	}
 
@@ -60,22 +67,16 @@ public class PostiAereo{
 	}
 
 	/* Assegna un posto a un passeggero */
-	public void assegnaPosto(int indicePasseggero, int fila, int numPosto){
-		try{
-			passeggeri[indicePasseggero].assegnaPosto(posti[fila][numPosto]);
-		}
-		catch(ArrayIndexOutOfBoundsException e){
-			System.out.println("Devi inserire indici validi!");
-		}
-		catch(AlreadyOccupiedException e){
-			System.out.println("Il posto è già occupato!");
-		}
+	public void assegnaPosto(int indicePasseggero, int fila, int numPosto) throws ArrayIndexOutOfBoundsException, AlreadyOccupiedException{
+		passeggeri[indicePasseggero].assegnaPosto(posti[fila][numPosto]);
 	}
 
 	/* Rimuove il posto assegnato a un passeggero */
 	public void rimuoviPosto(int indicePasseggero){
 		try{
 			passeggeri[indicePasseggero].liberaPosto();
+			passeggeri[indicePasseggero] = null;
+			numeroPasseggeri--;
 		}
 		catch(ArrayIndexOutOfBoundsException e){
 			System.out.println("Indice passeggero non valido!");

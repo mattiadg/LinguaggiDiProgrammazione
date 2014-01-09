@@ -3,7 +3,8 @@
  * Contiene i dati anagrafici del passeggero, nonchè il posto assegnato 
  */
 package aereo;
-public class Passeggero{
+import java.io.Serializable;
+public class Passeggero implements Serializable{
 	private String nome;
 	private String cognome;
 	private String codiceFiscale;

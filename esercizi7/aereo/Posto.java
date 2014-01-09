@@ -3,7 +3,9 @@
  * ciascun posto deve poter dire se è libero o meno e cambiare il suo stato di libero o occupato
  */
 package aereo;
-public class Posto{
+import java.io.Serializable;
+
+public class Posto implements Serializable{
 	private boolean occupato;
 	int fila;
 	char pos;
